@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #042f36;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.title {
+    width: 22ch;
+    overflow: hidden;
+    color: white;
+    font-size: 40px;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid orange;
+    animation: printed-text 6s steps(22),
+        flashin-border .75s step-start infinite;
+}
+
+@keyframes flashin-border {
+    0% {
+        border-color: orange;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: orange;
+    }
+}
+
+@keyframes printed-text {
+    from {
+        width: 0%;
+    }
+}
